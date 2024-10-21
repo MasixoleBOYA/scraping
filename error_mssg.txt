@@ -1,0 +1,94 @@
+PS C:\Users\J1121857\OneDrive - TotalEnergies\Desktop\Git_Repos>  c:; cd 'c:\Users\J1121857\OneDrive - TotalEnergies\Desktop\Git_Repos'; & 'c:\Users\J1121857\AppData\Local\Programs\Python\Python312\python.exe' 'c:\Users\J1121857\.vscode\extensions\ms-python.debugpy-2024.12.0-win32-x64\bundled\libs\debugpy\adapter/../..\debugpy\launcher' '61003' '--' 'c:\Users\J1121857\OneDrive - TotalEnergies\Desktop\Git_Repos\scraping\main.py'
+thon.debugpy-2024.12.0-win32-x64\x5cbundled\x5clibs\x5cdebugpy\x5cadapter/../..\x5cdebugpy\x5clauncher' '61003' '--' 'c:\x5cUsers\x5cJ1121857\x5cOneDrive - TotalEnergies\x5cDesktop\x5cGit_Repos\x5cscraping\x5cmain.py' ;00bca53f-3d83-4ead-95b4-bcdb88ef2fa0Traceback (most recent call last):
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 199, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 693, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connection.py", line 208, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001B6ADB2C4A0>, 'Connection to googlechromelabs.github.io timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Max retries exceeded with url: /chrome-for-testing/latest-patch-versions-per-build.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B6ADB2C4A0>, 'Connection to googlechromelabs.github.io timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\http.py", line 32, in get
+    resp = requests.get(
+           ^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Max retries exceeded with url: /chrome-for-testing/latest-patch-versions-per-build.json (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B6ADB2C4A0>, 'Connection to googlechromelabs.github.io timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\J1121857\OneDrive - TotalEnergies\Desktop\Git_Repos\scraping\main.py", line 13, in <module>
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=options)
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\driver_cache.py", line 107, in find_driver
+    driver_version = self.get_cache_key_driver_version(driver)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\driver_cache.py", line 154, in get_cache_key_driver_version
+    return driver.get_driver_version_to_download()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\driver.py", line 48, in get_driver_version_to_download
+    return self.get_latest_release_version()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\drivers\chrome.py", line 59, in get_latest_release_version
+    response = self._http_client.get(url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\J1121857\AppData\Roaming\Python\Python312\site-packages\webdriver_manager\core\http.py", line 35, in get
+    raise exceptions.ConnectionError(f"Could not reach host. Are you offline?")
+requests.exceptions.ConnectionError: Could not reach host. Are you offline?
+PS C:\Users\J1121857\OneDrive - TotalEnergies\Desktop\Git_Repos>
