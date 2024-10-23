@@ -19,3 +19,5 @@ if response.status_code == 200:
         print(f" -------------------------\n{link.get('href')}")
 else:
     print(f"Failed to retrieve the webpage:\n status: {response.status_code}")
+
+

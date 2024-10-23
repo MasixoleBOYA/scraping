@@ -1,0 +1,27 @@
+-----------
+Trade Type: 
+    Exports tag
+        <input id="ctl00_ContentPlaceHolder1_rdbExports" type="radio" name="ctl00$ContentPlaceHolder1$tradeType" value="rdbExports" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rdbExports\',\'\')', 0)">
+        <label for="ctl00_ContentPlaceHolder1_rdbExports">Exports</label>
+
+    Import tag
+        <input id="ctl00_ContentPlaceHolder1_rdbImports" type="radio" name="ctl00$ContentPlaceHolder1$tradeType" value="rdbImports" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rdbImports\',\'\')', 0)">
+        <label for="ctl00_ContentPlaceHolder1_rdbImports">Imports</label>
+-----------
+Focus Area
+
+    Tarrifs:
+        <input id="ctl00_ContentPlaceHolder1_rdbTariffs" type="radio" name="ctl00$ContentPlaceHolder1$focusArea" value="rdbTariffs" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rdbTariffs\',\'\')', 0)">
+        <label for="ctl00_ContentPlaceHolder1_rdbTariffs">Tariffs</label>
+
+    Countries:
+        <input id="ctl00_ContentPlaceHolder1_rdbCountries" type="radio" name="ctl00$ContentPlaceHolder1$focusArea" value="rdbCountries" checked="checked">
+        <label for="ctl00_ContentPlaceHolder1_rdbCountries">Countries</label>
+
+-----------
+if Focus Area == Tariffs:
+
+    Chapter:
+    <input id="ctl00_ContentPlaceHolder1_ddlChapters_26" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlChapters$26">
+    <label for="ctl00_ContentPlaceHolder1_ddlChapters_26">27 - Crude, Coal, Petroleum and Electricity</label>
+    
