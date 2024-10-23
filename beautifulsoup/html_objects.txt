@@ -1,4 +1,4 @@
------------
+----------- radio
 Trade Type: 
     Exports tag
         <input id="ctl00_ContentPlaceHolder1_rdbExports" type="radio" name="ctl00$ContentPlaceHolder1$tradeType" value="rdbExports" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rdbExports\',\'\')', 0)">
@@ -7,7 +7,7 @@ Trade Type:
     Import tag
         <input id="ctl00_ContentPlaceHolder1_rdbImports" type="radio" name="ctl00$ContentPlaceHolder1$tradeType" value="rdbImports" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$rdbImports\',\'\')', 0)">
         <label for="ctl00_ContentPlaceHolder1_rdbImports">Imports</label>
------------
+----------- radio
 Focus Area
 
     Tarrifs:
@@ -18,10 +18,72 @@ Focus Area
         <input id="ctl00_ContentPlaceHolder1_rdbCountries" type="radio" name="ctl00$ContentPlaceHolder1$focusArea" value="rdbCountries" checked="checked">
         <label for="ctl00_ContentPlaceHolder1_rdbCountries">Countries</label>
 
------------
-if Focus Area == Tariffs:
+----------- Dropdown menus (chekboxes)
+---- if Focus Area == Tariffs:
 
-    Chapter:
-    <input id="ctl00_ContentPlaceHolder1_ddlChapters_26" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlChapters$26">
-    <label for="ctl00_ContentPlaceHolder1_ddlChapters_26">27 - Crude, Coal, Petroleum and Electricity</label>
-    
+        Chapter:
+            <input id="ctl00_ContentPlaceHolder1_ddlChapters_26" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlChapters$26">
+            <label for="ctl00_ContentPlaceHolder1_ddlChapters_26">27 - Crude, Coal, Petroleum and Electricity</label>
+            
+        Tariff:
+            <input id="ctl00_ContentPlaceHolder1_ddlTariffs_29" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlTariffs$29">
+            <label for="ctl00_ContentPlaceHolder1_ddlTariffs_29">27101126 - Illuminating kerosene, as defined in Additional Note 1 (f), unmarked</label>
+
+        Country:
+            South Africa
+            <input id="ctl00_ContentPlaceHolder1_ddlCountries_209" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlCountries$209">
+            <label for="ctl00_ContentPlaceHolder1_ddlCountries_209">South Africa</label>
+
+        Period:
+            year
+                2020
+                2021
+                2022
+                2023
+                2024
+                <input id="ctl00_ContentPlaceHolder1_ddlYears_14" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlYears$14">
+                <label for="ctl00_ContentPlaceHolder1_ddlYears_14">2024</label>
+
+            month
+                January
+
+                February
+
+                March
+
+                April
+
+                May
+
+                June
+
+                July
+
+                August
+                <input id="ctl00_ContentPlaceHolder1_ddlMonths_7" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlMonths$7">
+                <label for="ctl00_ContentPlaceHolder1_ddlMonths_7">August</label>
+                
+                September
+
+                October
+
+                November
+                
+                December
+
+---- elseif Focus Area == Countries:
+        Country:
+        <input id="ctl00_ContentPlaceHolder1_ddlCountries0_209" type="checkbox" name="ctl00$ContentPlaceHolder1$ddlCountries0$209">
+        <label for="ctl00_ContentPlaceHolder1_ddlCountries0_209">South Africa</label>
+
+
+-------- END
+Bottom Table:
+    Select All:
+    <input id="ctl00_ContentPlaceHolder1_chkAll" type="checkbox" name="ctl00$ContentPlaceHolder1$chkAll" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$chkAll\',\'\')', 0)">
+    <label for="ctl00_ContentPlaceHolder1_chkAll">Select All</label>
+
+Download Button:
+    <input type="submit" name="ctl00$ContentPlaceHolder1$btnDownload" value="Download" id="ctl00_ContentPlaceHolder1_btnDownload">
+
+
