@@ -15,3 +15,24 @@ select
 	total_distance
 from
 	rdm01.ods_ssam_lnt_exceptions
+
+
+----------------------------------------------
+with subquery:
+SELECT
+    (SELECT count(tripnum)
+     FROM rdm01.ods_ssam_lnt_exceptions AS sub
+     WHERE extract(day from sub.STARTDATE) = extract(day from main.STARTDATE)
+    ) as exceptions_by_day,
+    main.tripnum,
+    main.depotcode,
+    main.transporter,
+    main.vehiclereg,
+    main.startdate,
+    main.stopdate,
+    main.avg_percent,
+    main.loaddate,
+    main.total_trip_time,
+    main.total_distance
+FROM
+    rdm01.ods_ssam_lnt_exceptions AS main;
