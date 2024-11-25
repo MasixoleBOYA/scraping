@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
- 
+
 # URL of the website you want to scrape
 url = "https://tools.sars.gov.za/tradestatsportal/data_download.aspx"
 # url = 'https://en.wikipedia.org/wiki/Machine_learning'
